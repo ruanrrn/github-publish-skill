@@ -135,6 +135,8 @@ Each public skill repo should have:
 - `assets/social-preview.svg`
 - a short one-line social preview copy snippet in the README
 - a banner illustration that feels organic and intentional rather than a pile of generic geometric blocks
+- a protected text-safe area where no decorative element sits behind, crosses, or crowds the copy
+- a composition with an obvious text column and an obvious illustration column, unless the repo has a very good reason to break that pattern
 
 Document the GitHub limitation honestly:
 

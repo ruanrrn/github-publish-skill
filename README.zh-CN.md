@@ -48,6 +48,7 @@
 - 组织一个完整的公开 skill 仓 payload，包括 README、中文 README、LICENSE、CONTRIBUTING、skill 源码和 `dist/`
 - 把 README 写成独立可理解，而不是一页跳转说明
 - 对公开 skill 仓使用统一的 badge、banner、social preview 结构
+- 保证 banner 的图形元素别压进文字区，标题和说明在仓库列表里也得一眼能读
 - 让 repo description 和 topics 与 skill 的真实职责对齐
 - 让同一家族 skill 仓风格统一，但不制造隐藏依赖
 - 始终保留一条硬边界：这套风格只给 skill 仓用

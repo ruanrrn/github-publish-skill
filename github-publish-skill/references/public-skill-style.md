@@ -101,6 +101,9 @@ Aim for:
 - a strong text area
 - a few asymmetric organic accents
 - enough restraint that the banner still reads clearly at repo scale
+- a protected text-safe zone: no circles, blobs, strokes, or frames should sit behind or cut through the title or copy
+- a clean gutter between the longest text line and the nearest decorative shape
+- a default left-copy / right-illustration split unless the repo genuinely benefits from a different composition
 
 ## Family consistency
 

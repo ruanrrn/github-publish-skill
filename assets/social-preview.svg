@@ -1,14 +1,25 @@
 <svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1280" height="640" fill="#F6F0E8"/>
-  <path d="M64 84C64 61.9 81.9 44 104 44H1176C1198.1 44 1216 61.9 1216 84V556C1216 578.1 1198.1 596 1176 596H104C81.9 596 64 578.1 64 556V84Z" fill="#111827"/>
-  <path d="M111 88C148 71 204 61 263 65C323 69 378 89 413 118C448 147 462 184 448 214C434 244 393 267 339 273C285 279 219 268 168 246C116 224 82 193 77 158C73 126 88 99 111 88Z" fill="#F59E0B" fill-opacity="0.95"/>
-  <path d="M885 128C934 92 1006 83 1069 101C1132 119 1181 162 1201 218C1222 275 1213 342 1171 388C1130 434 1057 458 989 449C922 440 860 398 833 334C807 271 835 174 885 128Z" fill="#1F2937" stroke="#FCD34D" stroke-width="4"/>
-  <path d="M930 375C965 347 1016 337 1062 346C1107 355 1148 382 1163 419C1177 456 1166 504 1133 536C1099 567 1046 580 997 571C948 561 904 529 890 486C876 443 894 403 930 375Z" fill="#10B981" fill-opacity="0.92"/>
-  <path d="M782 470C830 438 903 431 973 445C1044 460 1109 496 1151 548" stroke="#F9FAFB" stroke-width="10" stroke-linecap="round"/>
-  <path d="M852 164C874 128 906 100 947 82C988 64 1039 58 1086 67" stroke="#F9FAFB" stroke-width="10" stroke-linecap="round"/>
-  <text x="108" y="113" fill="#111827" font-family="Georgia, serif" font-size="24" font-weight="700">OpenClaw Skill</text>
-  <text x="86" y="228" fill="#F9FAFB" font-family="Georgia, serif" font-size="72" font-weight="700">GitHub Publish</text>
-  <text x="86" y="304" fill="#FCD34D" font-family="Georgia, serif" font-size="72" font-weight="700">Skill</text>
-  <text x="86" y="368" fill="#FDE68A" font-family="Arial, sans-serif" font-size="30">Publish OpenClaw skills as polished public GitHub skill repositories.</text>
-  <text x="86" y="425" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="26">This repo style is for skill repositories only, not arbitrary codebases.</text>
+  <rect x="48" y="48" width="1184" height="544" rx="28" fill="#111827"/>
+  <rect x="88" y="84" width="230" height="40" rx="20" fill="#F59E0B"/>
+  <text x="110" y="110" fill="#111827" font-family="Georgia, serif" font-size="24" font-weight="700">OpenClaw Skill</text>
+  <text x="88" y="218" fill="#F9FAFB" font-family="Georgia, serif" font-size="76" font-weight="700">GitHub Publish</text>
+  <text x="88" y="294" fill="#FCD34D" font-family="Georgia, serif" font-size="76" font-weight="700">Skill</text>
+  <text x="88" y="362" fill="#F9FAFB" font-family="Arial, sans-serif" font-size="32">Publish OpenClaw skills as polished</text>
+  <text x="88" y="404" fill="#FDE68A" font-family="Arial, sans-serif" font-size="32">public GitHub skill repositories.</text>
+  <text x="88" y="462" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="26">This style is for skill repositories only,</text>
+  <text x="88" y="500" fill="#D1D5DB" font-family="Arial, sans-serif" font-size="26">not arbitrary codebases.</text>
+  <circle cx="1098" cy="182" r="74" fill="#1F2937" stroke="#FCD34D" stroke-width="4"/>
+  <circle cx="1136" cy="454" r="58" fill="#10B981" fill-opacity="0.18" stroke="#34D399" stroke-width="4" stroke-opacity="0.75"/>
+  <rect x="852" y="156" width="252" height="80" rx="18" fill="#1F2937" stroke="#F9FAFB" stroke-opacity="0.16" stroke-width="4"/>
+  <rect x="884" y="184" width="110" height="12" rx="6" fill="#F59E0B"/>
+  <rect x="884" y="208" width="170" height="10" rx="5" fill="#F9FAFB" fill-opacity="0.92"/>
+  <rect x="824" y="276" width="312" height="84" rx="18" fill="#F9FAFB" fill-opacity="0.06" stroke="#F9FAFB" stroke-opacity="0.18" stroke-width="4"/>
+  <rect x="856" y="304" width="136" height="12" rx="6" fill="#FCD34D"/>
+  <rect x="856" y="328" width="220" height="10" rx="5" fill="#F3F4F6" fill-opacity="0.92"/>
+  <rect x="868" y="394" width="244" height="80" rx="18" fill="#10B981" fill-opacity="0.16" stroke="#A7F3D0" stroke-width="4"/>
+  <rect x="900" y="422" width="104" height="12" rx="6" fill="#A7F3D0"/>
+  <rect x="900" y="446" width="156" height="10" rx="5" fill="#F9FAFB" fill-opacity="0.92"/>
+  <path d="M1106 234C1134 252 1152 280 1156 310" stroke="#FCD34D" stroke-width="10" stroke-linecap="round"/>
+  <path d="M860 384C902 362 948 356 990 364" stroke="#F9FAFB" stroke-width="10" stroke-linecap="round"/>
 </svg>
