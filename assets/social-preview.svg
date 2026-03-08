@@ -1,0 +1,15 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="640" fill="#F6F0E8"/>
+  <rect x="48" y="48" width="1184" height="544" rx="28" fill="#111827"/>
+  <rect x="84" y="84" width="250" height="40" rx="20" fill="#F59E0B"/>
+  <text x="106" y="110" fill="#111827" font-family="Georgia, serif" font-size="24" font-weight="700">OpenClaw Skill</text>
+  <text x="84" y="215" fill="#F9FAFB" font-family="Georgia, serif" font-size="72" font-weight="700">GitHub Publish</text>
+  <text x="84" y="292" fill="#FCD34D" font-family="Georgia, serif" font-size="72" font-weight="700">Skill</text>
+  <text x="84" y="356" fill="#FDE68A" font-family="Arial, sans-serif" font-size="30">Publish OpenClaw skills as polished public GitHub skill repositories.</text>
+  <text x="84" y="416" fill="#F3F4F6" font-family="Arial, sans-serif" font-size="26">Important: this repo style applies to skill repos only, not arbitrary codebases.</text>
+  <rect x="900" y="150" width="240" height="68" rx="18" fill="#F59E0B"/>
+  <rect x="850" y="265" width="320" height="76" rx="18" fill="#1F2937" stroke="#FCD34D" stroke-width="4"/>
+  <rect x="925" y="385" width="170" height="56" rx="16" fill="#10B981"/>
+  <path d="M820 220C835 185 865 155 910 145" stroke="#F9FAFB" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1165 388C1185 378 1200 360 1208 338" stroke="#F9FAFB" stroke-width="10" stroke-linecap="round"/>
+</svg>
