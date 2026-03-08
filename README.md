@@ -11,118 +11,116 @@ English | [简体中文](README.zh-CN.md)
 ![README-Bilingual](https://img.shields.io/badge/README-Bilingual-F9FAFB?style=flat-square&labelColor=92400E)
 ![License-MIT](https://img.shields.io/badge/License-MIT-F9FAFB?style=flat-square&labelColor=111827)
 
-Publish or upgrade an OpenClaw skill as a polished public GitHub skill repository.
+Publish or republish OpenClaw skills as complete public GitHub skill repositories, using a repository standard designed specifically for skill repos.
 
-## Quick pitch
+> [!IMPORTANT]
+> This standard applies only to repositories whose primary artifact is an OpenClaw skill. It is not a general README, branding, or GitHub styling guide for apps, libraries, or mixed-purpose codebases.
 
-Publish OpenClaw skills as polished public GitHub skill repositories.
-Important: this repo style applies to skill repos only, not arbitrary codebases.
+## Overview
+
+`github-publish-skill` defines the publication standard for public OpenClaw skill repositories.
+
+It covers both sides of the job:
+
+- publishing or republishing the skill itself
+- shaping the repository so it reads like a finished public artifact rather than a raw folder export
+
+In practice, that means packaging the `.skill` artifact, tightening the repository narrative, aligning metadata, and keeping the repo independently understandable for someone who discovers it cold on GitHub.
 
 ## Why this exists
 
-Publishing a skill to GitHub is easy to do badly.
+Publishing a working skill is easy. Publishing a repository that is understandable, reusable, and credible to other people is the part that is usually under-specified.
 
-A raw folder dump technically works, but it creates a repo that looks half-finished, hides the packaged artifact, blurs the skill's lane, and forces future readers to reverse-engineer how the repo is meant to be used. Worse, once a few public skill repos exist, inconsistent presentation makes the whole family look accidental.
+Without an explicit standard, public skill repos tend to fail in predictable ways:
 
-`github-publish-skill` exists to stop that.
+- the repository looks like an internal folder dump instead of a deliberate release
+- the packaged artifact is missing or visually buried
+- the README assumes too much private context
+- contribution expectations are unclear
+- related repos in the same skill family drift into inconsistent presentation
 
-It combines two things into one canonical workflow:
+`github-publish-skill` exists to turn that failure mode into a documented, repeatable workflow.
 
-- publishing or republishing an OpenClaw skill repo to GitHub
-- shaping that repo so it looks complete, standalone, and reusable as a public skill repository
+## Scope
 
-## Works independently
+Use this skill when the repository is primarily a distributable OpenClaw skill repo and you need to make its public surface coherent.
 
-`github-publish-skill` stands on its own.
+Good fit:
 
-Use it whenever the repo being published is primarily an OpenClaw skill repo. It does not depend on the rest of the skill family to make sense.
+- creating a new public repository for a reusable OpenClaw skill
+- republishing a skill after a material update
+- upgrading an older skill repo to current public standards
+- aligning README, badges, metadata, contribution docs, and social-preview assets across a skill family
 
-Just as important, it has a hard boundary: the public-repo style guidance in this repo applies only to skill repositories. Do not use it as a generic styling standard for apps, libraries, or arbitrary code repos.
+Not a fit:
 
-## What the skill teaches
+- general software projects
+- applications or libraries
+- mixed repos where the skill is only a side artifact
 
-The skill tells the agent to:
+## What the standard covers
 
-- validate the skill before publishing
+The skill instructs the agent to standardize the parts of a public skill repo that determine whether it feels complete:
+
+- validate the skill before publication
 - package the `.skill` artifact cleanly
-- build a public repo payload that includes README, LICENSE, CONTRIBUTING, packaged artifact, and skill source
-- structure the README so the repo is independently understandable
-- use a consistent badge, banner, and social-preview pattern for public skill repos
-- keep banner graphics out of the text area so the headline and support copy stay readable at repo scale
-- prefer a clean text-first banner over decorative filler, especially on the right side
-- align repo description and topics with the skill's real scope
-- keep related skill repos visually coherent without creating hidden dependencies
-- preserve the hard boundary that this style is for skill repos only
+- assemble a public repo payload with `README.md`, `README.zh-CN.md`, `LICENSE`, `CONTRIBUTING.md`, skill source, and `dist/`
+- write repository copy that stands on its own without private context
+- align repository description and topics with the skill's real scope
+- use a text-first banner and social-preview pattern that stays readable at repo scale
+- preserve a hard scope boundary so the repo does not turn into a generic GitHub beautifier
+
+## Workflow summary
+
+A typical publication pass should look like this:
+
+1. Validate the skill and confirm that frontmatter, references, and packaging inputs resolve correctly.
+2. Generate or refresh the `.skill` artifact.
+3. Assemble the repository payload expected from a public release.
+4. Rewrite the README and contribution guidance for standalone public consumption.
+5. Align repository metadata, badges, and social-preview assets with the skill's actual role.
+6. Republish cleanly after material updates.
 
 ## When to use it
 
-Use `github-publish-skill` when:
+Use `github-publish-skill` when the problem is the repository itself, not the skill logic alone.
 
-- creating a new public repo for a reusable OpenClaw skill
-- republishing an existing skill after updates
-- standardizing README, badges, CONTRIBUTING, metadata, and social-preview assets for a skill repo
-- upgrading a public skill repo so it looks complete and independently understandable
+Typical triggers:
 
-Do not use it for general software projects, apps, libraries, or mixed-purpose repos.
+- "Turn this internal skill into a public GitHub repo."
+- "Refresh this repo so it looks like a finished release."
+- "Bring this skill repo in line with the rest of the family."
+- "Package the artifact and clean up the public-facing repo surface."
 
-## Example behavior
+## Representative outcomes
 
-### Example 1: first public release of a skill
+### New public skill repository
 
-A reusable workspace skill is ready to share publicly.
+A reusable internal skill is ready for public release.
 
-A good agent should:
+A good agent should validate the skill, package the artifact, build the public repository payload, and publish a repo that is readable and installable without side-channel explanation.
 
-1. validate the skill and package the `.skill` artifact
-2. create the repo payload with README, LICENSE, CONTRIBUTING, skill source, and `dist/`
-3. write a README that makes the repo self-contained
-4. publish the repo and align its metadata with the skill trigger language
+### Public repo refresh
 
-### Example 2: upgrading an older public skill repo
+An existing skill repo still works, but its public presentation is inconsistent with newer repos in the same family.
 
-An existing public skill repo works, but looks inconsistent with the newer skill family.
+A good agent should preserve the working skill, upgrade the README and contribution docs, refresh the public assets, and keep the repository independently useful.
 
-A good agent should:
+### Boundary enforcement
 
-1. preserve the skill logic and packaged artifact
-2. upgrade the README structure, badges, and social-preview section
-3. add `CONTRIBUTING.md` if missing
-4. keep the repo independently useful rather than turning it into a pointer page
+Someone tries to reuse this repo standard for a general app or library repository.
 
-### Example 3: scope mistake
+A good agent should reject the scope expansion and state clearly that this standard exists for OpenClaw skill repositories only.
 
-Someone suggests reusing this style for a generic app repo.
+## Related skill repos
 
-A good agent should refuse the scope creep and note that this style standard is for skill repositories only.
+These repositories are related examples, not required dependencies:
 
-## Related skills
+- `multi-task-continuity`: umbrella skill repo example — <https://github.com/ruanrrn/multi-task-continuity>
+- `task-orchestrator`: focused orchestration lane example — <https://github.com/ruanrrn/task-orchestrator>
+- `task-state-sync`: focused continuity/state lane example — <https://github.com/ruanrrn/task-state-sync>
 
-These are related, not required:
-
-- `multi-task-continuity`: an example of a polished umbrella skill repo — <https://github.com/ruanrrn/multi-task-continuity>
-- `task-orchestrator`: an example of a focused lane skill repo — <https://github.com/ruanrrn/task-orchestrator>
-- `task-state-sync`: an example of a focused continuity skill repo — <https://github.com/ruanrrn/task-state-sync>
-
-Use this repo when the problem is publishing the skill repo itself.
-
-## Social preview
-
-Suggested social preview asset: `assets/social-preview.svg`
-
-Suggested one-line copy:
-
-> Publish OpenClaw skills as polished public GitHub skill repositories.
-
-GitHub note:
-
-- The current `gh` CLI and GraphQL `UpdateRepositoryInput` do not expose a writable custom social preview field.
-- To use this image as the repository social preview, upload `assets/social-preview.svg` manually in the repo settings UI.
-
-## What you get
-
-- `github-publish-skill/` - the skill source
-- `github-publish-skill/references/public-skill-style.md` - style blueprint for public skill repositories
-- `dist/github-publish-skill.skill` - packaged artifact ready to import
+If the job is publishing or republishing the repository itself, start here.
 
 ## Install
 
@@ -131,12 +129,32 @@ Use either path:
 1. Import `dist/github-publish-skill.skill` into an OpenClaw environment.
 2. Copy `github-publish-skill/` into your skills directory if you want the editable source.
 
+## What this repo contains
+
+- `github-publish-skill/` - the skill source
+- `github-publish-skill/references/public-skill-style.md` - the style blueprint for public skill repositories
+- `dist/github-publish-skill.skill` - the packaged artifact ready to import
+- `assets/social-preview.svg` - the repository banner and suggested social-preview asset
+
+## Social preview
+
+Suggested social preview asset: `assets/social-preview.svg`
+
+Suggested one-line copy:
+
+> Publish OpenClaw skills as complete public GitHub skill repositories.
+
+> [!NOTE]
+> The public `gh` CLI and GraphQL `UpdateRepositoryInput` do not expose a writable custom social preview field.
+> To use this image as the repository social preview, upload `assets/social-preview.svg` manually in the repository settings UI.
+
 ## Repository layout
 
 ```text
 github-publish-skill/
 ├── LICENSE
 ├── README.md
+├── README.zh-CN.md
 ├── CONTRIBUTING.md
 ├── assets/
 │   └── social-preview.svg
@@ -150,14 +168,14 @@ github-publish-skill/
 
 ## Contributing
 
-See `CONTRIBUTING.md` for contribution scope, PR expectations, and how to keep this repo focused on skill-repo publishing instead of becoming a universal GitHub styling kit.
+See `CONTRIBUTING.md` for contribution scope, PR expectations, and the boundary that keeps this repo focused on public skill-repo publication instead of generic repository styling.
 
 ## Release hygiene
 
-- Regenerate `dist/github-publish-skill.skill` after each material skill change
-- Keep the repository description aligned with the skill trigger language
-- Keep the hard boundary explicit: this style guidance applies only to skill repositories
-- Keep the repo narrow and practical; no unrelated GitHub repo-fashion experiments
+- regenerate `dist/github-publish-skill.skill` after each material skill change
+- keep `README.md`, `README.zh-CN.md`, `SKILL.md`, and repository metadata aligned
+- keep the scope boundary explicit: this standard is for skill repositories only
+- prefer a narrower, more maintainable publication standard over feature creep
 
 ## Repository
 

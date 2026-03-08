@@ -11,127 +11,144 @@
 ![README-Bilingual](https://img.shields.io/badge/README-Bilingual-F9FAFB?style=flat-square&labelColor=92400E)
 ![License-MIT](https://img.shields.io/badge/License-MIT-F9FAFB?style=flat-square&labelColor=111827)
 
-把 OpenClaw skill 发布成一个像样的公开 GitHub skill 仓，而不是把文件夹直接倒上去。
+把 OpenClaw skill 发布或再发布为完整、专业、适合公开分发的 GitHub skill 仓库，并遵循一套只面向 skill 仓的仓库标准。
 
-## Quick pitch
+> [!IMPORTANT]
+> 这套标准只适用于“主要产物是 OpenClaw skill”的仓库。它不是给应用、库、或混合用途代码仓库准备的通用 README / 品牌 / GitHub 门面规范。
 
-把 OpenClaw skill 发布成完整、可读、可复用的公开 GitHub skill 仓。
-重点：这套仓库风格规范只适用于 skill 仓，不适用于普通代码仓。
+## 概览
 
-## Why this exists
+`github-publish-skill` 定义的是公开 OpenClaw skill 仓的发布标准，而不只是“把文件推到 GitHub”。
 
-把 skill 发到 GitHub，最容易犯的错不是“发不上去”，而是“虽然发上去了，但看起来像半成品”。
+它同时覆盖两部分工作：
 
-一个单纯能下载的仓库，并不等于一个做得好的公开 skill 仓。没有清楚的 README、没有打包产物、没有贡献说明、没有统一风格，后面的人就得靠猜：这仓到底怎么装、怎么用、怎么维护、和别的 skill 仓是什么关系。
+- skill 本体的发布或再发布
+- 仓库公开门面的整理，让它看起来像完成品，而不是内部目录导出
 
-`github-publish-skill` 就是拿来解决这件事的。
+落到实际操作上，就是把 `.skill` 产物打包好、把仓库叙事写清楚、把 metadata 对齐，并确保一个第一次在 GitHub 上看到这个仓的人也能独立理解它。
 
-它把两类事情合成一条标准工作流：
+## 为什么需要它
 
-- 把一个 OpenClaw skill 发布或再发布到 GitHub
-- 把这个仓整理成一个完整、独立、可复用的公开 skill 仓
+让一个 skill 能跑起来并不难。真正经常缺失标准的，是如何把它发布成一个可理解、可复用、值得信任的公开仓库。
 
-## Works independently
+如果没有明确标准，公开 skill 仓通常会在同几个地方翻车：
 
-`github-publish-skill` 可以独立使用。
+- 仓库看起来像内部文件夹直出，而不像正式发布物
+- 打包产物缺失，或者虽然存在但被埋得很深
+- README 默认读者已经知道太多上下文
+- 贡献方式和维护边界不清楚
+- 同一 skill 家族里的仓库越长越不像一家人
 
-只要你要发布的是 OpenClaw skill 仓，它就够用了，不依赖别的 skill 才成立。
+`github-publish-skill` 的意义，就是把这类问题收敛成一套可重复执行的标准流程。
 
-但边界也必须讲死：这里的公开仓风格规范只对 skill 仓有效，不要拿它去美化普通应用仓、库仓或乱七八糟的混合仓。
+## 适用边界
 
-## What the skill teaches
-
-这个 skill 会要求代理：
-
-- 发布前先校验 skill
-- 正确打包 `.skill` 产物
-- 组织一个完整的公开 skill 仓 payload，包括 README、中文 README、LICENSE、CONTRIBUTING、skill 源码和 `dist/`
-- 把 README 写成独立可理解，而不是一页跳转说明
-- 对公开 skill 仓使用统一的 badge、banner、social preview 结构
-- 保证 banner 的图形元素别压进文字区，标题和说明在仓库列表里也得一眼能读
-- 优先做干净的文字主视觉，别为了显得有设计感硬塞右侧装饰垃圾
-- 让 repo description 和 topics 与 skill 的真实职责对齐
-- 让同一家族 skill 仓风格统一，但不制造隐藏依赖
-- 始终保留一条硬边界：这套风格只给 skill 仓用
-
-## When to use it
+当目标仓库本质上是一个可分发的 OpenClaw skill 仓，并且你要把它的公开门面整理完整时，就该用这个 skill。
 
 适合这些场景：
 
-- 要为一个可复用 OpenClaw skill 新建公开仓
-- skill 更新后要重新发布
-- 要把一个旧的公开 skill 仓整理成更完整的公开作品
-- 要统一 skill 仓的 README、badge、CONTRIBUTING、metadata、social preview 等门面
+- 为一个可复用 OpenClaw skill 新建公开 GitHub 仓库
+- skill 发生实质更新后重新发布
+- 把旧 skill 仓升级到当前的公开标准
+- 统一 skill 家族中 README、badge、metadata、贡献文档和 social-preview 资源的表达方式
 
-不适合：普通软件项目、应用、库、或混合用途仓库。
+不适合这些场景：
 
-## Example behavior
+- 普通软件项目
+- 应用或库
+- skill 只是附属产物的混合仓库
 
-### Example 1: 第一次公开发布 skill
+## 这套标准覆盖什么
 
-一个工作区里的 skill 已经准备好对外分享。
+这个 skill 会要求代理把真正决定“仓库像不像一个公开成品”的部分标准化：
 
-靠谱的代理应该：
+- 发布前先校验 skill
+- 正确生成 `.skill` 打包产物
+- 组织完整的公开仓 payload，包括 `README.md`、`README.zh-CN.md`、`LICENSE`、`CONTRIBUTING.md`、skill 源码和 `dist/`
+- 把仓库文案写到脱离私有上下文也能成立
+- 让仓库 description 和 topics 与 skill 的真实职责对齐
+- 使用以可读性优先的 banner / social-preview 方案，保证仓库列表尺度下也清晰
+- 明确保留适用边界，避免仓库慢慢变成“GitHub 门面万能装修包”
 
-1. 先校验 skill 并打包 `.skill`
-2. 准备 repo payload，包括 README、中文 README、LICENSE、CONTRIBUTING、skill 源码和 `dist/`
-3. 把 README 写到第一次看到的人也能看懂
-4. 发布仓库，并把 GitHub 元数据和 skill 职责对齐
+## 工作流概览
 
-### Example 2: 升级老的公开 skill 仓
+一次标准的发布整理通常应该这样走：
 
-一个旧 skill 仓功能没坏，但卖相和新仓不统一。
+1. 校验 skill，确认 frontmatter、references 和打包输入都能正确解析。
+2. 生成或刷新 `.skill` 产物。
+3. 组装公开发布所需的仓库内容。
+4. 重写 README 和贡献说明，使其适合独立公开阅读。
+5. 对齐仓库 metadata、badge 和 social-preview 资源，使其反映 skill 的真实定位。
+6. 在 material update 之后干净地重新发布。
 
-靠谱的代理应该：
+## 何时使用
 
-1. 保留 skill 逻辑和打包产物
-2. 升级 README 结构、badge 和 social preview 区块
-3. 缺什么补什么，比如 `CONTRIBUTING.md`
-4. 让仓库自己成立，而不是变成一个“去别处看”的占位页
+当问题的核心是“怎么把仓库本身发布好”，而不是“skill 逻辑怎么写”时，就应该用 `github-publish-skill`。
 
-### Example 3: scope 用错了
+典型触发语句包括：
 
-有人想把这套规则拿去套普通 app 仓。
+- “把这个内部 skill 整理成公开 GitHub 仓。”
+- “把这个 repo 收口到像正式发布物。”
+- “让这个 skill 仓和同一家族的公开仓风格一致。”
+- “把打包产物和公开门面一起整理好。”
 
-靠谱的代理应该明确拒绝 scope creep，并指出这套标准只对 skill 仓有效。
+## 代表性结果
 
-## Related skills
+### 新建公开 skill 仓
 
-这些是相关项，不是依赖项：
+一个内部可复用的 skill 已经准备好对外发布。
 
-- `multi-task-continuity`：一个总包型公开 skill 仓示例 —— <https://github.com/ruanrrn/multi-task-continuity>
-- `task-orchestrator`：一个 focused lane skill 仓示例 —— <https://github.com/ruanrrn/task-orchestrator>
-- `task-state-sync`：一个 focused continuity skill 仓示例 —— <https://github.com/ruanrrn/task-state-sync>
+靠谱的代理应该先校验 skill，再打包产物、组织公开仓内容，最后把仓库发布成一个不需要额外解释也能安装和理解的公开成品。
 
-当问题本身是“怎么把 skill 仓发布好”时，用这个仓。
+### 旧仓翻新
 
-## Social preview
+一个现有 skill 仓功能没坏，但公开门面已经落后于同一家族的新仓。
 
-建议 social preview 资源：`assets/social-preview.svg`
+靠谱的代理应该保留 working skill，本着最小必要改动原则升级 README、贡献文档和公开资源，同时确保仓库本身仍然独立可用。
 
-建议一句话文案：
+### 边界控制
 
-> Publish OpenClaw skills as polished public GitHub skill repositories.
+有人想把这套标准拿去包装普通 app 仓或库仓。
 
-GitHub 备注：
+靠谱的代理应该拒绝这种 scope 扩张，并明确指出这套标准只服务于 OpenClaw skill 仓。
 
-- 当前公开的 `gh` CLI 和 GraphQL `UpdateRepositoryInput` 都没有可写的 custom social preview 字段。
-- 如果你要把这张图真正设成仓库 social preview，只能去 GitHub 仓库设置页手动上传 `assets/social-preview.svg`。
+## 相关 skill 仓
 
-## What you get
+这些仓库是相关示例，不是依赖项：
+
+- `multi-task-continuity`：总包型 skill 仓示例 —— <https://github.com/ruanrrn/multi-task-continuity>
+- `task-orchestrator`：聚焦 orchestration lane 的示例 —— <https://github.com/ruanrrn/task-orchestrator>
+- `task-state-sync`：聚焦 continuity / state lane 的示例 —— <https://github.com/ruanrrn/task-state-sync>
+
+如果你要解决的是“这个仓该怎么发、怎么整理、怎么公开成立”，就从这里开始。
+
+## 安装
+
+两种方式都可以：
+
+1. 直接把 `dist/github-publish-skill.skill` 导入到 OpenClaw 环境。
+2. 如果你需要可编辑源码，就把 `github-publish-skill/` 复制到你的 skills 目录。
+
+## 仓库内容
 
 - `github-publish-skill/` - skill 源码
 - `github-publish-skill/references/public-skill-style.md` - 公开 skill 仓风格蓝图
 - `dist/github-publish-skill.skill` - 可直接导入的打包产物
+- `assets/social-preview.svg` - 仓库 banner 和建议使用的 social-preview 资源
 
-## Install
+## Social preview
 
-两种方式都可以：
+建议使用的 social preview 资源：`assets/social-preview.svg`
 
-1. 直接导入 `dist/github-publish-skill.skill`
-2. 把 `github-publish-skill/` 复制到你的 skills 目录，按源码方式使用
+建议一句话文案：
 
-## Repository layout
+> Publish OpenClaw skills as complete public GitHub skill repositories.
+
+> [!NOTE]
+> 公开的 `gh` CLI 和 GraphQL `UpdateRepositoryInput` 目前都没有可写的 custom social preview 字段。
+> 如果要把这张图真正设成仓库 social preview，仍然需要到 GitHub 仓库设置页手动上传 `assets/social-preview.svg`。
+
+## 仓库结构
 
 ```text
 github-publish-skill/
@@ -149,18 +166,18 @@ github-publish-skill/
     └── github-publish-skill.skill
 ```
 
-## Contributing
+## 贡献
 
-见 `CONTRIBUTING.md`，里面写了贡献范围、PR 预期，以及怎么确保这个仓继续只服务于 skill 仓发布，而不是变成 GitHub 万物包装机。
+见 `CONTRIBUTING.md`。里面写明了贡献范围、PR 预期，以及如何保持这个仓继续聚焦“公开 skill 仓发布标准”，而不是滑坡成通用 GitHub 装修工具。
 
-## Release hygiene
+## 发布卫生
 
 - 每次 skill 有实质改动后，都要重新生成 `dist/github-publish-skill.skill`
-- 仓库描述要和 skill 的触发语义保持一致
-- 硬边界必须一直存在：这套风格规范只适用于 skill 仓
-- 保持仓库克制，别把它扩展成无关项目的 GitHub 装修包
+- 保持 `README.md`、`README.zh-CN.md`、`SKILL.md` 与仓库 metadata 一致
+- 始终明确适用边界：这套标准只服务于 skill 仓
+- 优先选择更窄、更稳、更可维护的发布标准，而不是功能膨胀
 
-## Repository
+## 仓库信息
 
 - GitHub: `https://github.com/ruanrrn/github-publish-skill`
 - License: MIT

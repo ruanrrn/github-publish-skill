@@ -33,24 +33,31 @@ English | [简体中文](README.zh-CN.md)
 ![Works-Standalone](...)
 ![Artifact-.skill Included](...)
 ![License-MIT](...)
+
+One-sentence repository description.
+
+> [!IMPORTANT]
+> Optional hard-boundary callout when the repo standard applies only to a narrow class of repositories.
 ```
 
 Optional:
 
 - bilingual badge for multilingual repos
+- omit the callout when the repo does not need boundary reinforcement at the top
 
 ## Required narrative sections
 
-- `Quick pitch`
+- `Overview`
 - `Why this exists`
-- `Works independently`
-- skill-specific behavior section
+- `Scope`
+- a repo-specific capability section such as `What the standard covers`
+- `Workflow summary` when the repo defines a repeatable operational flow
 - `When to use it`
-- concrete examples
-- `Related skills`
-- `Social preview`
-- `What you get`
+- representative examples or outcomes
+- `Related skill repos`
 - `Install`
+- `What this repo contains`
+- `Social preview`
 - `Repository layout`
 - `Contributing`
 - `Release hygiene`
@@ -60,8 +67,8 @@ Optional:
 
 Use wording like:
 
-- "These are related, not required"
-- "Use this repo alone if you only need this lane"
+- "These repositories are related examples, not required dependencies"
+- "Start here when the problem is publishing the repository itself"
 - "Use the umbrella repo when you want the whole operating model"
 
 ## Social preview wording

@@ -1,6 +1,6 @@
 ---
 name: github-publish-skill
-description: "Publish or upgrade an OpenClaw skill as a polished public GitHub skill repository. Use when: (1) creating a new public repo for a reusable skill, (2) republishing an existing skill after updates, (3) standardizing README, badges, CONTRIBUTING, repo metadata, and social-preview assets for a skill repo. This skill's public-repo style rules apply only to skill repositories, not to arbitrary software projects or general GitHub repos."
+description: "Publish or republish an OpenClaw skill as a complete public GitHub skill repository. Use when: (1) creating a new public repo for a reusable skill, (2) republishing an existing skill after updates, (3) standardizing README, CONTRIBUTING, repo metadata, and social-preview assets for a skill repo. This skill's public-repo standard applies only to skill repositories, not to arbitrary software projects or general GitHub repos."
 ---
 
 # GitHub Publish Skill
@@ -96,20 +96,22 @@ Default structure:
 3. banner image
 4. badge row
 5. one-sentence description
-6. `Quick pitch`
-7. `Why this exists`
-8. `Works independently`
-9. core behavior section
-10. `When to use it`
-11. concrete examples
-12. `Related skills` marked as optional, not required
-13. `Social preview`
-14. `What you get`
+6. optional scope callout for hard-boundary repos
+7. `Overview`
+8. `Why this exists`
+9. `Scope`
+10. `What the standard covers` or another repo-specific capability section
+11. `Workflow summary` when the repo defines an operational workflow
+12. `When to use it`
+13. representative examples or outcomes
+14. `Related skill repos` marked as optional examples, not required dependencies
 15. `Install`
-16. `Repository layout`
-17. `Contributing`
-18. `Release hygiene`
-19. `Repository`
+16. `What this repo contains`
+17. `Social preview`
+18. `Repository layout`
+19. `Contributing`
+20. `Release hygiene`
+21. `Repository`
 
 ### Badge pattern
 
