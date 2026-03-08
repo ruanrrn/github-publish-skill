@@ -24,6 +24,8 @@ Not a fit:
 ```md
 # Skill Name
 
+English | [简体中文](README.zh-CN.md)
+
 ![Banner](assets/social-preview.svg)
 
 ![OpenClaw Skill](...)
@@ -35,7 +37,6 @@ Not a fit:
 
 Optional:
 
-- language switcher line under the title
 - bilingual badge for multilingual repos
 
 ## Required narrative sections
@@ -89,6 +90,17 @@ Keep it short. Use these sections:
 - `Workflow`
 - `Pull request guidance`
 - `Repo principle`
+
+## Banner art guidance
+
+Prefer organic shapes, flowing curves, or scene-like forms over generic stacked rectangles and dashboard-looking blocks.
+
+Aim for:
+
+- a clear mood
+- a strong text area
+- a few asymmetric organic accents
+- enough restraint that the banner still reads clearly at repo scale
 
 ## Family consistency
 

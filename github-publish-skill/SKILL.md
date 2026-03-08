@@ -41,6 +41,7 @@ Before publishing, ensure:
 A polished public skill repo should usually include:
 
 - `README.md`
+- `README.zh-CN.md`
 - `LICENSE`
 - `CONTRIBUTING.md`
 - `dist/<skill>.skill`
@@ -91,7 +92,7 @@ If a repo is not primarily a distributable OpenClaw skill repo, stop and use a d
 Default structure:
 
 1. title
-2. optional language switcher
+2. language switcher
 3. banner image
 4. badge row
 5. one-sentence description
@@ -133,6 +134,7 @@ Each public skill repo should have:
 
 - `assets/social-preview.svg`
 - a short one-line social preview copy snippet in the README
+- a banner illustration that feels organic and intentional rather than a pile of generic geometric blocks
 
 Document the GitHub limitation honestly:
 
