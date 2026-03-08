@@ -49,6 +49,7 @@ The skill tells the agent to:
 - structure the README so the repo is independently understandable
 - use a consistent badge, banner, and social-preview pattern for public skill repos
 - keep banner graphics out of the text area so the headline and support copy stay readable at repo scale
+- prefer a clean text-first banner over decorative filler, especially on the right side
 - align repo description and topics with the skill's real scope
 - keep related skill repos visually coherent without creating hidden dependencies
 - preserve the hard boundary that this style is for skill repos only

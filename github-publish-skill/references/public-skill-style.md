@@ -93,17 +93,16 @@ Keep it short. Use these sections:
 
 ## Banner art guidance
 
-Prefer organic shapes, flowing curves, or scene-like forms over generic stacked rectangles and dashboard-looking blocks.
+Prefer text-first banners over decorative filler. If the visual idea is not pulling its weight, remove it.
 
 Aim for:
 
 - a clear mood
 - a strong text area
-- a few asymmetric organic accents
 - enough restraint that the banner still reads clearly at repo scale
 - a protected text-safe zone: no circles, blobs, strokes, or frames should sit behind or cut through the title or copy
-- a clean gutter between the longest text line and the nearest decorative shape
-- a default left-copy / right-illustration split unless the repo genuinely benefits from a different composition
+- typography, spacing, and color doing most of the work
+- zero obligation to add a right-side illustration block just to avoid empty space
 
 ## Family consistency
 
