@@ -113,6 +113,19 @@ Default structure:
 20. `Release hygiene`
 21. `Repository`
 
+### README voice
+
+Write like a serious open-source tool, not an internal note dump and not marketing fluff.
+
+Aim for:
+
+- precise positioning in the first sentence
+- professional, public-facing prose that can survive being read cold on GitHub
+- explicit scope boundaries instead of relying on implication
+- examples framed as representative outcomes, not casual chat transcripts unless the repo genuinely needs raw transcript style
+- short, information-dense paragraphs instead of slogan piles
+- bilingual parity when both `README.md` and `README.zh-CN.md` exist
+
 ### Badge pattern
 
 Use a small consistent badge set near the top.

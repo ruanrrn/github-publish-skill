@@ -68,6 +68,7 @@ The skill instructs the agent to standardize the parts of a public skill repo th
 - write repository copy that stands on its own without private context
 - align repository description and topics with the skill's real scope
 - use a text-first banner and social-preview pattern that stays readable at repo scale
+- write README prose like a professional public tool repo, not an internal note dump
 - preserve a hard scope boundary so the repo does not turn into a generic GitHub beautifier
 
 ## Workflow summary

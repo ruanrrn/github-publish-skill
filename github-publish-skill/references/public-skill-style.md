@@ -63,6 +63,24 @@ Optional:
 - `Release hygiene`
 - `Repository`
 
+## README voice
+
+Write for a public GitHub reader who has no private context.
+
+Prefer:
+
+- a precise opening sentence that says what the repo does
+- professional product-documentation language over slogans or in-jokes
+- explicit scope statements for narrow repos
+- representative outcomes and workflows over vague claims
+- bilingual consistency when the repo ships `README.md` and `README.zh-CN.md`
+
+Avoid:
+
+- chatty filler that weakens the repo's credibility
+- internal shorthand that only makes sense to people already in the project
+- overselling a narrow skill as a universal framework
+
 ## Related-skills wording
 
 Use wording like:
