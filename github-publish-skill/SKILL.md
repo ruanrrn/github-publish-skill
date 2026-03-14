@@ -36,6 +36,27 @@ Before publishing, ensure:
 - bundled references or assets resolve correctly
 - the skill packages cleanly into `.skill`
 
+### 1.5 Run a secret risk scan (mandatory)
+
+Before creating commits or pushing to a public repo, scan for obvious secrets.
+
+Minimum requirements:
+
+- scan tracked + untracked files in the repo payload (exclude `.git/` and `dist/`)
+- fail closed: if anything looks like a secret, stop and ask before pushing
+- never paste secret values into chat or commit messages; report only file + line
+
+Recommended tooling:
+
+- run `python3 scripts/secret_scan.py <repo-root>` from this skill repo's `scripts/` directory
+- also sanity-check that files like `.env`, `*.pem`, `*.key`, `id_rsa`, and `id_ed25519` are not present
+
+If the scan flags findings:
+
+- remove the secret from the repo
+- rotate/revoke the credential if it may have been exposed
+- add/verify `.gitignore` rules so it cannot happen again
+
 ### 2. Prepare the repo payload
 
 A polished public skill repo should usually include:
