@@ -2,8 +2,6 @@
 
 English | [简体中文](README.zh-CN.md)
 
-![GitHub Publish Skill banner](assets/social-preview.svg)
-
 ![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-111827?style=flat-square)
 ![Focus-Skill Repo Publishing](https://img.shields.io/badge/Focus-Skill%20Repo%20Publishing-F59E0B?style=flat-square&labelColor=111827)
 ![Works-Standalone](https://img.shields.io/badge/Works-Standalone-F9FAFB?style=flat-square&labelColor=1F2937)
@@ -50,7 +48,7 @@ Good fit:
 - creating a new public repository for a reusable OpenClaw skill
 - republishing a skill after a material update
 - upgrading an older skill repo to current public standards
-- aligning README, badges, metadata, contribution docs, and social-preview assets across a skill family
+- aligning README, badges, and metadata across a skill family
 
 Not a fit:
 
@@ -67,7 +65,6 @@ The skill instructs the agent to standardize the parts of a public skill repo th
 - assemble a public repo payload with `README.md`, `README.zh-CN.md`, `LICENSE`, `CONTRIBUTING.md`, skill source, and `dist/`
 - write repository copy that stands on its own without private context
 - align repository description and topics with the skill's real scope
-- use a text-first banner and social-preview pattern that stays readable at repo scale
 - write README prose like a professional public tool repo, not an internal note dump
 - preserve a hard scope boundary so the repo does not turn into a generic GitHub beautifier
 
@@ -79,7 +76,7 @@ A typical publication pass should look like this:
 2. Generate or refresh the `.skill` artifact.
 3. Assemble the repository payload expected from a public release.
 4. Rewrite the README and contribution guidance for standalone public consumption.
-5. Align repository metadata, badges, and social-preview assets with the skill's actual role.
+5. Align repository metadata and badges with the skill's actual role.
 6. Republish cleanly after material updates.
 
 ## When to use it
@@ -105,7 +102,7 @@ A good agent should validate the skill, package the artifact, build the public r
 
 An existing skill repo still works, but its public presentation is inconsistent with newer repos in the same family.
 
-A good agent should preserve the working skill, upgrade the README and contribution docs, refresh the public assets, and keep the repository independently useful.
+A good agent should preserve the working skill, upgrade the README and contribution docs, and keep the repository independently useful.
 
 ### Boundary enforcement
 
@@ -135,19 +132,6 @@ Use either path:
 - `github-publish-skill/` - the skill source
 - `github-publish-skill/references/public-skill-style.md` - the style blueprint for public skill repositories
 - `dist/github-publish-skill.skill` - the packaged artifact ready to import
-- `assets/social-preview.svg` - the repository banner and suggested social-preview asset
-
-## Social preview
-
-Suggested social preview asset: `assets/social-preview.svg`
-
-Suggested one-line copy:
-
-> Publish OpenClaw skills as complete public GitHub skill repositories.
-
-> [!NOTE]
-> The public `gh` CLI and GraphQL `UpdateRepositoryInput` do not expose a writable custom social preview field.
-> To use this image as the repository social preview, upload `assets/social-preview.svg` manually in the repository settings UI.
 
 ## Repository layout
 
@@ -157,8 +141,6 @@ github-publish-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── CONTRIBUTING.md
-├── assets/
-│   └── social-preview.svg
 ├── github-publish-skill/
 │   ├── SKILL.md
 │   └── references/

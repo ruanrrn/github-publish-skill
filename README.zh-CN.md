@@ -2,8 +2,6 @@
 
 [English](README.md) | 简体中文
 
-![GitHub Publish Skill banner](assets/social-preview.svg)
-
 ![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-111827?style=flat-square)
 ![Focus-Skill Repo Publishing](https://img.shields.io/badge/Focus-Skill%20Repo%20Publishing-F59E0B?style=flat-square&labelColor=111827)
 ![Works-Standalone](https://img.shields.io/badge/Works-Standalone-F9FAFB?style=flat-square&labelColor=1F2937)
@@ -14,11 +12,11 @@
 把 OpenClaw skill 发布或再发布为完整、专业、适合公开分发的 GitHub skill 仓库，并遵循一套只面向 skill 仓的仓库标准。
 
 > [!IMPORTANT]
-> 这套标准只适用于“主要产物是 OpenClaw skill”的仓库。它不是给应用、库、或混合用途代码仓库准备的通用 README / 品牌 / GitHub 门面规范。
+> 这套标准只适用于"主要产物是 OpenClaw skill"的仓库。它不是给应用、库、或混合用途代码仓库准备的通用 README / 品牌 / GitHub 门面规范。
 
 ## 概览
 
-`github-publish-skill` 定义的是公开 OpenClaw skill 仓的发布标准，而不只是“把文件推到 GitHub”。
+`github-publish-skill` 定义的是公开 OpenClaw skill 仓的发布标准，而不只是"把文件推到 GitHub"。
 
 它同时覆盖两部分工作：
 
@@ -50,7 +48,7 @@
 - 为一个可复用 OpenClaw skill 新建公开 GitHub 仓库
 - skill 发生实质更新后重新发布
 - 把旧 skill 仓升级到当前的公开标准
-- 统一 skill 家族中 README、badge、metadata、贡献文档和 social-preview 资源的表达方式
+- 统一 skill 家族中 README、badge、metadata 和贡献文档的表达方式
 
 不适合这些场景：
 
@@ -60,16 +58,15 @@
 
 ## 这套标准覆盖什么
 
-这个 skill 会要求代理把真正决定“仓库像不像一个公开成品”的部分标准化：
+这个 skill 会要求代理把真正决定"仓库像不像一个公开成品"的部分标准化：
 
 - 发布前先校验 skill
 - 正确生成 `.skill` 打包产物
 - 组织完整的公开仓 payload，包括 `README.md`、`README.zh-CN.md`、`LICENSE`、`CONTRIBUTING.md`、skill 源码和 `dist/`
 - 把仓库文案写到脱离私有上下文也能成立
 - 让仓库 description 和 topics 与 skill 的真实职责对齐
-- 使用以可读性优先的 banner / social-preview 方案，保证仓库列表尺度下也清晰
 - README 文案按正式公开工具文档来写，而不是内部备忘录口吻
-- 明确保留适用边界，避免仓库慢慢变成“GitHub 门面万能装修包”
+- 明确保留适用边界，避免仓库慢慢变成"GitHub 门面万能装修包"
 
 ## 工作流概览
 
@@ -79,19 +76,19 @@
 2. 生成或刷新 `.skill` 产物。
 3. 组装公开发布所需的仓库内容。
 4. 重写 README 和贡献说明，使其适合独立公开阅读。
-5. 对齐仓库 metadata、badge 和 social-preview 资源，使其反映 skill 的真实定位。
+5. 对齐仓库 metadata 和 badge，使其反映 skill 的真实定位。
 6. 在 material update 之后干净地重新发布。
 
 ## 何时使用
 
-当问题的核心是“怎么把仓库本身发布好”，而不是“skill 逻辑怎么写”时，就应该用 `github-publish-skill`。
+当问题的核心是"怎么把仓库本身发布好"，而不是"skill 逻辑怎么写"时，就应该用 `github-publish-skill`。
 
 典型触发语句包括：
 
-- “把这个内部 skill 整理成公开 GitHub 仓。”
-- “把这个 repo 收口到像正式发布物。”
-- “让这个 skill 仓和同一家族的公开仓风格一致。”
-- “把打包产物和公开门面一起整理好。”
+- "把这个内部 skill 整理成公开 GitHub 仓。"
+- "把这个 repo 收口到像正式发布物。"
+- "让这个 skill 仓和同一家族的公开仓风格一致。"
+- "把打包产物和公开门面一起整理好。"
 
 ## 代表性结果
 
@@ -105,7 +102,7 @@
 
 一个现有 skill 仓功能没坏，但公开门面已经落后于同一家族的新仓。
 
-靠谱的代理应该保留 working skill，本着最小必要改动原则升级 README、贡献文档和公开资源，同时确保仓库本身仍然独立可用。
+靠谱的代理应该保留 working skill，本着最小必要改动原则升级 README、贡献文档，同时确保仓库本身仍然独立可用。
 
 ### 边界控制
 
@@ -121,7 +118,7 @@
 - `task-orchestrator`：聚焦 orchestration lane 的示例 —— <https://github.com/ruanrrn/task-orchestrator>
 - `task-state-sync`：聚焦 continuity / state lane 的示例 —— <https://github.com/ruanrrn/task-state-sync>
 
-如果你要解决的是“这个仓该怎么发、怎么整理、怎么公开成立”，就从这里开始。
+如果你要解决的是"这个仓该怎么发、怎么整理、怎么公开成立"，就从这里开始。
 
 ## 安装
 
@@ -135,19 +132,6 @@
 - `github-publish-skill/` - skill 源码
 - `github-publish-skill/references/public-skill-style.md` - 公开 skill 仓风格蓝图
 - `dist/github-publish-skill.skill` - 可直接导入的打包产物
-- `assets/social-preview.svg` - 仓库 banner 和建议使用的 social-preview 资源
-
-## Social preview
-
-建议使用的 social preview 资源：`assets/social-preview.svg`
-
-建议一句话文案：
-
-> Publish OpenClaw skills as complete public GitHub skill repositories.
-
-> [!NOTE]
-> 公开的 `gh` CLI 和 GraphQL `UpdateRepositoryInput` 目前都没有可写的 custom social preview 字段。
-> 如果要把这张图真正设成仓库 social preview，仍然需要到 GitHub 仓库设置页手动上传 `assets/social-preview.svg`。
 
 ## 仓库结构
 
@@ -157,8 +141,6 @@ github-publish-skill/
 ├── README.md
 ├── README.zh-CN.md
 ├── CONTRIBUTING.md
-├── assets/
-│   └── social-preview.svg
 ├── github-publish-skill/
 │   ├── SKILL.md
 │   └── references/
@@ -169,7 +151,7 @@ github-publish-skill/
 
 ## 贡献
 
-见 `CONTRIBUTING.md`。里面写明了贡献范围、PR 预期，以及如何保持这个仓继续聚焦“公开 skill 仓发布标准”，而不是滑坡成通用 GitHub 装修工具。
+见 `CONTRIBUTING.md`。里面写明了贡献范围、PR 预期，以及如何保持这个仓继续聚焦"公开 skill 仓发布标准"，而不是滑坡成通用 GitHub 装修工具。
 
 ## 发布卫生
 
