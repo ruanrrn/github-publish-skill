@@ -9,27 +9,27 @@
 ![README-Bilingual](https://img.shields.io/badge/README-Bilingual-F9FAFB?style=flat-square&labelColor=92400E)
 ![License-MIT](https://img.shields.io/badge/License-MIT-F9FAFB?style=flat-square&labelColor=111827)
 
-把 OpenClaw skill 发布或再发布为完整、专业、适合公开分发的 GitHub skill 仓库，并遵循一套只面向 skill 仓的仓库标准。
+将 OpenClaw skill 发布或重新发布为完整、专业且适合公开分发的 GitHub skill 仓库，遵循一套专为 skill 仓库设计的标准。
 
 > [!IMPORTANT]
-> 这套标准只适用于"主要产物是 OpenClaw skill"的仓库。它不是给应用、库、或混合用途代码仓库准备的通用 README / 品牌 / GitHub 门面规范。
+> 这套标准仅适用于以 OpenClaw skill 为主要产物的仓库。不适用于应用、库或混合用途代码仓库的通用 README / 品牌 / GitHub 展示规范。
 
 ## 概览
 
-`github-publish-skill` 定义的是公开 OpenClaw skill 仓的发布标准，而不只是"把文件推到 GitHub"。
+`github-publish-skill` 定义了公开 OpenClaw skill 仓库的发布标准，而不仅仅是"将文件推送到 GitHub"。
 
-它同时覆盖两部分工作：
+它涵盖两部分工作：
 
-- skill 本体的发布或再发布
-- 仓库公开门面的整理，让它看起来像完成品，而不是内部目录导出
+- skill 本体的发布或重新发布
+- 仓库对外展示的整理，使其呈现为完整的成品，而非内部目录的导出
 
-落到实际操作上，就是把 `.skill` 产物打包好、把仓库叙事写清楚、把 metadata 对齐，并确保一个第一次在 GitHub 上看到这个仓的人也能独立理解它。
+具体而言，就是将 `.skill` 产物打包、理清仓库叙事、对齐 metadata，并确保任何首次在 GitHub 上看到该仓库的人都能独立理解它。
 
 ## 为什么需要它
 
 让一个 skill 能跑起来并不难。真正经常缺失标准的，是如何把它发布成一个可理解、可复用、值得信任的公开仓库。
 
-如果没有明确标准，公开 skill 仓通常会在同几个地方翻车：
+如果没有明确标准，公开 skill 仓库通常会在以下几个方面出现问题：
 
 - 仓库看起来像内部文件夹直出，而不像正式发布物
 - 打包产物缺失，或者虽然存在但被埋得很深
@@ -41,7 +41,7 @@
 
 ## 适用边界
 
-当目标仓库本质上是一个可分发的 OpenClaw skill 仓，并且你要把它的公开门面整理完整时，就该用这个 skill。
+当目标仓库本质上是一个可分发的 OpenClaw skill 仓库，且你需要将其对外展示整理完整时，就应使用此 skill。
 
 适合这些场景：
 
@@ -58,19 +58,19 @@
 
 ## 这套标准覆盖什么
 
-这个 skill 会要求代理把真正决定"仓库像不像一个公开成品"的部分标准化：
+此 skill 要求代理将决定"仓库是否呈现为公开成品"的关键部分标准化：
 
 - 发布前先校验 skill
 - 正确生成 `.skill` 打包产物
-- 组织完整的公开仓 payload，包括 `README.md`、`README.zh-CN.md`、`LICENSE`、`CONTRIBUTING.md`、skill 源码和 `dist/`
-- 把仓库文案写到脱离私有上下文也能成立
+- 组织完整的公开仓库内容，包括 `README.md`、`README.zh-CN.md`、`LICENSE`、`CONTRIBUTING.md`、skill 源码和 `dist/`
+- 撰写让没有内部背景的人也能理解的仓库文案
 - 让仓库 description 和 topics 与 skill 的真实职责对齐
-- README 文案按正式公开工具文档来写，而不是内部备忘录口吻
-- 明确保留适用边界，避免仓库慢慢变成"GitHub 门面万能装修包"
+- README 文案按正式公开工具文档撰写，而非内部备忘的口吻
+- 明确保留适用边界，避免仓库沦为"GitHub 门面美化万能包"
 
 ## 工作流概览
 
-一次标准的发布整理通常应该这样走：
+一次标准的发布整理流程如下：
 
 1. 校验 skill，确认 frontmatter、references 和打包输入都能正确解析。
 2. 生成或刷新 `.skill` 产物。
@@ -151,14 +151,14 @@ github-publish-skill/
 
 ## 贡献
 
-见 `CONTRIBUTING.md`。里面写明了贡献范围、PR 预期，以及如何保持这个仓继续聚焦"公开 skill 仓发布标准"，而不是滑坡成通用 GitHub 装修工具。
+详见 `CONTRIBUTING.md`，其中明确了贡献范围、PR 预期，以及如何确保本仓库始终聚焦于"公开 skill 仓库发布标准"，而非沦为通用的 GitHub 美化工具。
 
 ## 发布卫生
 
-- 每次 skill 有实质改动后，都要重新生成 `dist/github-publish-skill.skill`
+- 每次对 skill 进行实质性修改后，重新生成 `dist/github-publish-skill.skill`
 - 保持 `README.md`、`README.zh-CN.md`、`SKILL.md` 与仓库 metadata 一致
-- 始终明确适用边界：这套标准只服务于 skill 仓
-- 优先选择更窄、更稳、更可维护的发布标准，而不是功能膨胀
+- 始终明确适用范围：本标准仅适用于 skill 仓库
+- 优先选择更精简、更稳定、更易维护的发布标准，避免功能膨胀
 
 ## 仓库信息
 
