@@ -16,7 +16,7 @@ Publish or republish OpenClaw skills as complete public GitHub skill repositorie
 
 ## Overview
 
-`github-publish-skill` defines the publication standard for public OpenClaw skill repositories.
+`skill-publish` defines the publication standard for public OpenClaw skill repositories.
 
 It covers both sides of the job:
 
@@ -37,7 +37,7 @@ Without an explicit standard, public skill repos tend to fail in predictable way
 - contribution expectations are unclear
 - related repos in the same skill family drift into inconsistent presentation
 
-`github-publish-skill` exists to turn that failure mode into a documented, repeatable workflow.
+`skill-publish` exists to turn that failure mode into a documented, repeatable workflow.
 
 ## Scope
 
@@ -81,7 +81,7 @@ A typical publication pass should look like this:
 
 ## When to use it
 
-Use `github-publish-skill` when the problem is the repository itself, not the skill logic alone.
+Use `skill-publish` when the problem is the repository itself, not the skill logic alone.
 
 Typical triggers:
 
@@ -124,29 +124,29 @@ If the job is publishing or republishing the repository itself, start here.
 
 Use either path:
 
-1. Import `dist/github-publish-skill.skill` into an OpenClaw environment.
-2. Copy `github-publish-skill/` into your skills directory if you want the editable source.
+1. Import `dist/skill-publish.skill` into an OpenClaw environment.
+2. Copy `skill-publish/` into your skills directory if you want the editable source.
 
 ## What this repo contains
 
-- `github-publish-skill/` - the skill source
-- `github-publish-skill/references/public-skill-style.md` - the style blueprint for public skill repositories
-- `dist/github-publish-skill.skill` - the packaged artifact ready to import
+- `skill-publish/` - the skill source
+- `skill-publish/references/public-skill-style.md` - the style blueprint for public skill repositories
+- `dist/skill-publish.skill` - the packaged artifact ready to import
 
 ## Repository layout
 
 ```text
-github-publish-skill/
+skill-publish/
 ├── LICENSE
 ├── README.md
 ├── README.zh-CN.md
 ├── CONTRIBUTING.md
-├── github-publish-skill/
+├── skill-publish/
 │   ├── SKILL.md
 │   └── references/
 │       └── public-skill-style.md
 └── dist/
-    └── github-publish-skill.skill
+    └── skill-publish.skill
 ```
 
 ## Contributing
@@ -155,12 +155,12 @@ See `CONTRIBUTING.md` for contribution scope, PR expectations, and the boundary 
 
 ## Release hygiene
 
-- regenerate `dist/github-publish-skill.skill` after each material skill change
+- regenerate `dist/skill-publish.skill` after each material skill change
 - keep `README.md`, `README.zh-CN.md`, `SKILL.md`, and repository metadata aligned
 - keep the scope boundary explicit: this standard is for skill repositories only
 - prefer a narrower, more maintainable publication standard over feature creep
 
 ## Repository
 
-- GitHub: `https://github.com/ruanrrn/github-publish-skill`
+- GitHub: `https://github.com/ruanrrn/skill-publish`
 - License: MIT

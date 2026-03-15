@@ -16,7 +16,7 @@
 
 ## 概览
 
-`github-publish-skill` 定义了公开 OpenClaw skill 仓库的发布标准，而不仅仅是"将文件推送到 GitHub"。
+`skill-publish` 定义了公开 OpenClaw skill 仓库的发布标准，而不仅仅是"将文件推送到 GitHub"。
 
 它涵盖两部分工作：
 
@@ -37,7 +37,7 @@
 - 贡献方式和维护边界不清楚
 - 同一 skill 家族里的仓库越长越不像一家人
 
-`github-publish-skill` 的意义，就是把这类问题收敛成一套可重复执行的标准流程。
+`skill-publish` 的意义，就是把这类问题收敛成一套可重复执行的标准流程。
 
 ## 适用边界
 
@@ -66,7 +66,7 @@
 - 撰写让没有内部背景的人也能理解的仓库文案
 - 让仓库 description 和 topics 与 skill 的真实职责对齐
 - README 文案按正式公开工具文档撰写，而非内部备忘的口吻
-- 明确保留适用边界，避免仓库沦为"GitHub 门面美化万能包"
+- 明确保留适用边界，避免仓库沦为"GitHub 展示美化万能包"
 
 ## 工作流概览
 
@@ -81,14 +81,14 @@
 
 ## 何时使用
 
-当问题的核心是"怎么把仓库本身发布好"，而不是"skill 逻辑怎么写"时，就应该用 `github-publish-skill`。
+当问题的核心是"怎么把仓库本身发布好"，而不是"skill 逻辑怎么写"时，就应该用 `skill-publish`。
 
 典型触发语句包括：
 
 - "把这个内部 skill 整理成公开 GitHub 仓。"
-- "把这个 repo 收口到像正式发布物。"
+- "把这个 repo 聚焦到像正式发布物。"
 - "让这个 skill 仓和同一家族的公开仓风格一致。"
-- "把打包产物和公开门面一起整理好。"
+- "把打包产物和公开展示一起整理好。"
 
 ## 代表性结果
 
@@ -100,7 +100,7 @@
 
 ### 旧仓翻新
 
-一个现有 skill 仓功能没坏，但公开门面已经落后于同一家族的新仓。
+一个现有 skill 仓功能没坏，但公开展示已经落后于同一家族的新仓。
 
 靠谱的代理应该保留 working skill，本着最小必要改动原则升级 README、贡献文档，同时确保仓库本身仍然独立可用。
 
@@ -124,29 +124,29 @@
 
 两种方式都可以：
 
-1. 直接把 `dist/github-publish-skill.skill` 导入到 OpenClaw 环境。
-2. 如果你需要可编辑源码，就把 `github-publish-skill/` 复制到你的 skills 目录。
+1. 直接把 `dist/skill-publish.skill` 导入到 OpenClaw 环境。
+2. 如果你需要可编辑源码，就把 `skill-publish/` 复制到你的 skills 目录。
 
 ## 仓库内容
 
-- `github-publish-skill/` - skill 源码
-- `github-publish-skill/references/public-skill-style.md` - 公开 skill 仓风格蓝图
-- `dist/github-publish-skill.skill` - 可直接导入的打包产物
+- `skill-publish/` - skill 源码
+- `skill-publish/references/public-skill-style.md` - 公开 skill 仓风格蓝图
+- `dist/skill-publish.skill` - 可直接导入的打包产物
 
 ## 仓库结构
 
 ```text
-github-publish-skill/
+skill-publish/
 ├── LICENSE
 ├── README.md
 ├── README.zh-CN.md
 ├── CONTRIBUTING.md
-├── github-publish-skill/
+├── skill-publish/
 │   ├── SKILL.md
 │   └── references/
 │       └── public-skill-style.md
 └── dist/
-    └── github-publish-skill.skill
+    └── skill-publish.skill
 ```
 
 ## 贡献
@@ -155,12 +155,12 @@ github-publish-skill/
 
 ## 发布规范
 
-- 每次对 skill 进行实质性修改后，重新生成 `dist/github-publish-skill.skill`
+- 每次对 skill 进行实质性修改后，重新生成 `dist/skill-publish.skill`
 - 保持 `README.md`、`README.zh-CN.md`、`SKILL.md` 与仓库 metadata 一致
 - 始终明确适用范围：本标准仅适用于 skill 仓库
 - 优先选择更精简、更稳定、更易维护的发布标准，避免功能膨胀
 
 ## 仓库信息
 
-- GitHub: `https://github.com/ruanrrn/github-publish-skill`
+- GitHub: `https://github.com/ruanrrn/skill-publish`
 - License: MIT
