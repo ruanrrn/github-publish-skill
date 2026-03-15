@@ -26,8 +26,6 @@ Not a fit:
 
 English | [简体中文](README.zh-CN.md)
 
-![Banner](assets/social-preview.svg)
-
 ![OpenClaw Skill](...)
 ![Focus-...](...)
 ![Works-Standalone](...)
@@ -57,7 +55,6 @@ Optional:
 - `Related skill repos`
 - `Install`
 - `What this repo contains`
-- `Social preview`
 - `Repository layout`
 - `Contributing`
 - `Release hygiene`
@@ -81,6 +78,19 @@ Avoid:
 - internal shorthand that only makes sense to people already in the project
 - overselling a narrow skill as a universal framework
 
+## Translation quality (bilingual repos)
+
+When maintaining both English and Chinese versions:
+
+- **Translate meaning, not words.** Avoid literal translations that sound awkward or unnatural. Focus on conveying the same intent and information in a way that native speakers would express it.
+- **Match technical terminology.** Use consistent translations for technical terms throughout both versions.
+- **Maintain structure parity.** Headers, sections, and formatting should align between both versions.
+- **Avoid machine-translation artifacts.** Watch out for common MT errors:
+  - Overly formal or stiff phrasing that doesn't match the original tone
+  - Mistranslated idioms or cultural references
+  - Inconsistent terminology across sections
+- **Keep both versions updated.** When you change content in one language, update the other immediately.
+
 ## Related-skills wording
 
 Use wording like:
@@ -88,23 +98,6 @@ Use wording like:
 - "These repositories are related examples, not required dependencies"
 - "Start here when the problem is publishing the repository itself"
 - "Use the umbrella repo when you want the whole operating model"
-
-## Social preview wording
-
-```md
-## Social preview
-
-Suggested social preview asset: `assets/social-preview.svg`
-
-Suggested one-line copy:
-
-> ...
-
-GitHub note:
-
-- The current `gh` CLI and GraphQL `UpdateRepositoryInput` do not expose a writable custom social preview field.
-- To use this image as the repository social preview, upload `assets/social-preview.svg` manually in the repo settings UI.
-```
 
 ## CONTRIBUTING shape
 
@@ -115,19 +108,6 @@ Keep it short. Use these sections:
 - `Workflow`
 - `Pull request guidance`
 - `Repo principle`
-
-## Banner art guidance
-
-Prefer text-first banners over decorative filler. If the visual idea is not pulling its weight, remove it.
-
-Aim for:
-
-- a clear mood
-- a strong text area
-- enough restraint that the banner still reads clearly at repo scale
-- a protected text-safe zone: no circles, blobs, strokes, or frames should sit behind or cut through the title or copy
-- typography, spacing, and color doing most of the work
-- zero obligation to add a right-side illustration block just to avoid empty space
 
 ## Family consistency
 
