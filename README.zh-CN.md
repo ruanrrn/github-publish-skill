@@ -114,11 +114,11 @@
 
 这些仓库是相关示例，不是依赖项：
 
-- `multi-task-continuity`：总包型 skill 仓示例 —— <https://github.com/ruanrrn/multi-task-continuity>
-- `task-orchestrator`：聚焦 orchestration lane 的示例 —— <https://github.com/ruanrrn/task-orchestrator>
-- `task-state-sync`：聚焦 continuity / state lane 的示例 —— <https://github.com/ruanrrn/task-state-sync>
+- `task-orchestrator`：多任务编排 skill 示例 —— <https://github.com/ruanrrn/task-orchestrator>
+- `restart-continuity`：重启恢复 skill 示例 —— <https://github.com/ruanrrn/restart-continuity>
+- `telegram-exec-approval`：Telegram 审批修复 skill 示例 —— <https://github.com/ruanrrn/telegram-exec-approval>
 
-如果你要解决的是"这个仓该怎么发、怎么整理、怎么公开成立"，就从这里开始。
+如果你要解决的是"如何正确发布和整理 skill 仓库"，就从这里开始。
 
 ## 安装
 
@@ -153,7 +153,7 @@ github-publish-skill/
 
 详见 `CONTRIBUTING.md`，其中明确了贡献范围、PR 预期，以及如何确保本仓库始终聚焦于"公开 skill 仓库发布标准"，而非沦为通用的 GitHub 美化工具。
 
-## 发布卫生
+## 发布规范
 
 - 每次对 skill 进行实质性修改后，重新生成 `dist/github-publish-skill.skill`
 - 保持 `README.md`、`README.zh-CN.md`、`SKILL.md` 与仓库 metadata 一致

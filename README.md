@@ -114,9 +114,9 @@ A good agent should reject the scope expansion and state clearly that this stand
 
 These repositories are related examples, not required dependencies:
 
-- `multi-task-continuity`: umbrella skill repo example — <https://github.com/ruanrrn/multi-task-continuity>
-- `task-orchestrator`: focused orchestration lane example — <https://github.com/ruanrrn/task-orchestrator>
-- `task-state-sync`: focused continuity/state lane example — <https://github.com/ruanrrn/task-state-sync>
+- `task-orchestrator`: multitask orchestration skill example — <https://github.com/ruanrrn/task-orchestrator>
+- `restart-continuity`: restart recovery skill example — <https://github.com/ruanrrn/restart-continuity>
+- `telegram-exec-approval`: Telegram approval repair skill example — <https://github.com/ruanrrn/telegram-exec-approval>
 
 If the job is publishing or republishing the repository itself, start here.
 
