@@ -1,6 +1,6 @@
 ---
 name: github-publish-skill
-description: "Publish or republish an OpenClaw skill as a complete public GitHub skill repository. Use when: (1) creating a new public repo for a reusable skill, (2) republishing an existing skill after updates, (3) standardizing README, CONTRIBUTING, repo metadata, and social-preview assets for a skill repo. This skill's public-repo standard applies only to skill repositories, not to arbitrary software projects or general GitHub repos."
+description: "Publish or republish an OpenClaw skill as a complete public GitHub skill repository. Use when: (1) creating a new public repo for a reusable skill, (2) republishing an existing skill after updates, (3) standardizing README, CONTRIBUTING, and repo metadata for a skill repo. This skill's public-repo standard applies only to skill repositories, not to arbitrary software projects or general GitHub repos."
 ---
 
 # GitHub Publish Skill
@@ -62,12 +62,11 @@ If the scan flags findings:
 A polished public skill repo should usually include:
 
 - `README.md`
-- `README.zh-CN.md`
+- `README.zh-CN.md` (recommended for bilingual repos)
 - `LICENSE`
 - `CONTRIBUTING.md`
 - `dist/<skill>.skill`
 - `<skill>/SKILL.md`
-- `assets/social-preview.svg` when public presentation matters
 
 ### 3. Create or update the GitHub repo
 
@@ -114,25 +113,23 @@ Default structure:
 
 1. title
 2. language switcher
-3. banner image
-4. badge row
-5. one-sentence description
-6. optional scope callout for hard-boundary repos
-7. `Overview`
-8. `Why this exists`
-9. `Scope`
-10. `What the standard covers` or another repo-specific capability section
-11. `Workflow summary` when the repo defines an operational workflow
-12. `When to use it`
-13. representative examples or outcomes
-14. `Related skill repos` marked as optional examples, not required dependencies
-15. `Install`
-16. `What this repo contains`
-17. `Social preview`
-18. `Repository layout`
-19. `Contributing`
-20. `Release hygiene`
-21. `Repository`
+3. badge row
+4. one-sentence description
+5. optional scope callout for hard-boundary repos
+6. `Overview`
+7. `Why this exists`
+8. `Scope`
+9. `What the standard covers` or another repo-specific capability section
+10. `Workflow summary` when the repo defines an operational workflow
+11. `When to use it`
+12. representative examples or outcomes
+13. `Related skill repos` marked as optional examples, not required dependencies
+14. `Install`
+15. `What this repo contains`
+16. `Repository layout`
+17. `Contributing`
+18. `Release hygiene`
+19. `Repository`
 
 ### README voice
 
@@ -146,6 +143,21 @@ Aim for:
 - examples framed as representative outcomes, not casual chat transcripts unless the repo genuinely needs raw transcript style
 - short, information-dense paragraphs instead of slogan piles
 - bilingual parity when both `README.md` and `README.zh-CN.md` exist
+
+### Translation quality (bilingual repos)
+
+When maintaining both English (`README.md`) and Chinese (`README.zh-CN.md`) versions:
+
+- **Translate meaning, not words.** Avoid literal translations that sound awkward or unnatural. Focus on conveying the same intent and information in a way that native speakers would express it.
+- **Match technical terminology.** Use consistent translations for technical terms throughout both versions.
+- **Maintain structure parity.** Headers, sections, and formatting should align between both versions. If you add a section to one, add it to the other.
+- **Avoid machine-translation artifacts.** Watch out for common MT errors like:
+  - Overly formal or stiff phrasing that doesn't match the original tone
+  - Mistranslated idioms or cultural references
+  - Inconsistent terminology across sections
+  - Sentences that are grammatically correct but semantically wrong
+- **Review by native speakers when possible.** If you're unsure about translation quality, ask a native speaker to review it.
+- **Keep both versions updated.** When you change content in one language, update the other immediately. Stale translations create confusion.
 
 ### Badge pattern
 
@@ -163,22 +175,6 @@ Optional badges:
 
 - `README-Bilingual`
 - a lane-specific capability badge when it adds clarity
-
-### Social preview rule
-
-Each public skill repo should have:
-
-- `assets/social-preview.svg`
-- a short one-line social preview copy snippet in the README
-- a banner that stays text-first and readable at repo scale
-- a protected text-safe area where no decorative element sits behind, crosses, or crowds the copy
-- no meaningless right-side illustration filler; if decoration adds no information or mood, omit it
-- a minimal composition that can succeed with typography, spacing, and color alone
-
-Document the GitHub limitation honestly:
-
-- the public `gh` CLI and GraphQL `UpdateRepositoryInput` do not expose a writable custom social preview field
-- if the repo should use that image in GitHub's settings UI, say so directly in the README
 
 ### CONTRIBUTING rule
 
@@ -203,4 +199,4 @@ When multiple public repos belong to one skill family:
 
 ## References
 
-Read `references/public-skill-style.md` when shaping README, badges, CONTRIBUTING, and social-preview sections.
+Read `references/public-skill-style.md` when shaping README, badges, and CONTRIBUTING sections.
